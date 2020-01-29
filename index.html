@@ -43,7 +43,7 @@
 						<ul class="icons">
 							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
 							<li><a href="https://www.instagram.com/livyoung.brows/" class="icon brands fa-instagram"><span class="label">Facebook</span></a></li>
-							<li><a href=mailto:livyoungbrows@gmail.com?subject="subject text" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<!-- <li><a href=mailto:livyoungbrows@gmail.com?subject="subject text" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
 						</ul>
 
 				</div>
@@ -165,7 +165,7 @@
 							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
 							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
 
-							<form method="post" action="mailto:livyoungbrows@gmail.com">
+							<form method="post" action="/api/contact" id="myForm" onsubmit="post(); return false;">
 								<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
@@ -173,7 +173,7 @@
 										<textarea name="message" placeholder="Message"></textarea>
 									</div>
 									<div class="col-12">
-										<input type="submit" value="Send Message" />
+										<button type="submit" id="submitBtn">submit</button>
 									</div>
 								</div>
 							</form>
@@ -201,6 +201,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// $(document).ready(function(){
+				// 	$("#submitBtn").click(function(){ 
+				// 		post()
+				// 	});
+				// });
+				function post() {$.post('/api/contact', $('#myForm').serialize()) }     
+				</script>
 
 	</body>
 </html>
