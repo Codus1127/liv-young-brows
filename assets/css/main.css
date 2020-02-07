@@ -212,6 +212,22 @@ input, select, textarea {
 
 /* Container */
 
+.livPic {
+	height: 400px;
+	width: auto !important;
+	margin: 0 auto;
+}
+
+@media (max-width: 580px) {
+	.livPic {
+		width: 90vw !important;
+		height: auto;
+	}
+}
+
+
+
+
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
@@ -272,6 +288,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		margin: 0 auto;
 	}
 
 		.row > * {
@@ -1949,6 +1966,7 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
+		margin-bottom: 2rem;
 		position: relative;
 		display: inline-block;
 		border-radius: 0.35em;

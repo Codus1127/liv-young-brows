@@ -24,7 +24,7 @@ app.post("/api/contact", (req, res) => {
     console.log(name, email, message)
     const mailOptions = {
         from: 'Portfolio Contact',
-        to: 'codyjamesyoung@gmail.com',
+        to: '6.2Oliviaarnold@gmail.com',
         subject: `${name} reached out from your website!`,
         html: `<p style='font-family: Sans-serif; color: black; font-size: 14px; text-align: center'>${message}<br><br><br>Name: ${name}<br>Email: ${email}</p>`
     }
